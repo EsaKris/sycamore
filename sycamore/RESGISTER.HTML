@@ -1,0 +1,233 @@
+<style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #001600;
+      color: #fff;
+    }
+    .arrow-button {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background-color: transparent;
+      color: #fff;
+      font-size: 24px;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    .arrow-button:hover {
+      color: #007B00;
+    }
+  
+    .registration-form {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #001600;
+    }
+  
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      margin-bottom: 30px;
+    }
+  
+    .logo {
+      max-width: 200px;
+      object-fit: contain;
+    }
+  
+    .header-image {
+      max-width: 500px;
+      object-fit: contain;
+      box-shadow: -2px 4px 10px rgba(0, 0, 0, 0.25);
+    }
+  
+    .form-title {
+      margin: 30px 0;
+      text-align: center;
+      font-size: 36px;
+      font-weight: 600;
+    }
+  
+    form {
+      width: 100%;
+      max-width: 800px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+  
+    .form-group {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      width: 100%;
+    }
+  
+    .form-group .input-container {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .form-label {
+      margin-bottom: 10px;
+      font-size: 18px;
+      font-weight: 600;
+    }
+  
+    .form-input,
+    .address-input,
+    select {
+      background-color: rgba(255, 255, 255, 0.1);
+      color: #fff;
+      border: none;
+      padding: 15px;
+      border-radius: 10px;
+      font-size: 16px;
+    }
+  
+    .address-input {
+      width: 100%;
+      margin-top: 10px;
+    }
+  
+    .button-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 20px; /* Add some space between the buttons */
+}
+
+.button-group button {
+  flex: 1; /* Make each button take up equal space */
+  background-color: #fff;
+  color: #171f12;
+  padding: 15px;
+  border-radius: 10px;
+  border: none;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: center;
+}
+
+.button-group button:hover {
+  background-color: #e0e0e0;
+}
+
+  
+    /* Mobile adjustments */
+    @media (max-width: 768px) {
+      .form-group {
+        flex-direction: column;
+      }
+  
+      .button-container {
+        flex-direction: column;
+      }
+  
+      .header-container {
+        flex-direction: column;
+        align-items: center;
+      }
+  
+      .logo,
+      .header-image {
+        max-width: 100%;
+      }
+    }
+  </style>
+  <a href="index.html" class="arrow-button" id="backButton">← Back</a>
+  <section class="registration-form">
+   <h1 class="form-title">Registration Form</h1>
+  
+    <form>
+      <div class="form-group">
+        <div class="input-container">
+          <label for="firstName" class="form-label">First Name*</label>
+          <input type="text" id="firstName" class="form-input" placeholder="Enter your first name" required />
+        </div>
+  
+        <div class="input-container">
+          <label for="lastName" class="form-label">Last Name*</label>
+          <input type="text" id="lastName" class="form-input" placeholder="Enter your last name" required />
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <div class="input-container">
+          <label for="email" class="form-label">Email*</label>
+          <input type="email" id="email" class="form-input" placeholder="Enter your email" required />
+        </div>
+  
+        <div class="input-container">
+          <label for="phoneNumber" class="form-label">Phone Number*</label>
+          <input type="tel" id="phoneNumber" class="form-input" placeholder="Enter your phone number" required />
+        </div>
+      </div>
+  
+      <div class="input-container">
+        <label for="address" class="form-label">Address*</label>
+        <input type="text" id="address" class="address-input" placeholder="Enter your address" required />
+      </div>
+  
+      <div class="form-group">
+        <div class="input-container">
+          <label for="state" class="form-label">State*</label>
+          <input type="text" id="state" class="form-input" placeholder="Enter your state" required />
+        </div>
+  
+        <div class="input-container">
+          <label for="country" class="form-label">Country*</label>
+          <input type="text" id="country" class="form-input" placeholder="Enter your country" required />
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <div class="input-container">
+          <label for="accommodation" class="form-label">Do you need accommodation?*</label>
+          <select id="accommodation" class="form-input" required>
+            <option value="">Select an option</option>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+          </select>
+        </div>
+  
+        <div class="input-container">
+          <label for="maritalStatus" class="form-label">Marital Status*</label>
+          <select id="maritalStatus" class="form-input" required>
+            <option value="">Select an option</option>
+            <option value="single">Single</option>
+            <option value="married">Married</option>
+            <option value="divorced">Divorced</option>
+            <option value="widowed">Widowed</option>
+          </select>
+        </div>
+      </div>
+  
+      <div class="button-container">
+        <div class="button-group">
+          <button type="submit" class="register-button">Register Now</button>
+          <a href="WORKER.HTML"><button type="button" class="join-button">Join Work Force</button></a>
+        </div>
+      </div>
+    </form>
+  </section>
+  
